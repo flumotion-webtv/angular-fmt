@@ -1,6 +1,25 @@
 [
   {
     "id": "1",
+    "name": "Oceans (MP4, WebM)",
+    "description": "Description of pod 4",
+    "type": "video",
+    "duration": "46",
+    "total_rates": "999",
+    "posterUrl": "http://www.videojs.com/img/poster.jpg",
+    "streams": [
+      {
+        "url": "http://vjs.zencdn.net/v/oceans.mp4",
+        "mimetype": "video/mp4"
+      },
+      {
+        "url": "http://vjs.zencdn.net/v/oceans.webm",
+        "mimetype": "video/webm"
+      }
+    ]
+  },
+  {
+    "id": "2",
     "name": "bird_low (MP4)",
     "description": "Fusce placerat metus at purus ornare, et gravida libero pretium. Mauris lacinia, tellus at egestas congue, urna sem commodo elit, gravida posuere lacus lectus vitae enim. Aliquam bibendum mi feugiat, suscipit tellus sit amet, gravida arcu.",
     "duration": "29",
@@ -14,7 +33,7 @@
     ]
   },
   {
-    "id": "2",
+    "id": "3",
     "name": "AFaerysTale_sylviaApostol_640_500_short (FLV)",
     "description": "Description of pod 2",
     "type": "video",
@@ -29,7 +48,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": "4",
     "name": "train_1500 (MP3)",
     "description": "Description of pod 3",
     "type": "audio",
@@ -44,30 +63,19 @@
     ]
   },
   {
-    "id": "4",
-    "name": "Oceans (MP4, WebM)",
-    "description": "Description of pod 4",
-    "type": "video",
-    "duration": "46",
-    "total_rates": "999",
-    "streams": [
-      {
-        "url": "http://vjs.zencdn.net/v/oceans.mp4",
-        "mimetype": "video/mp4"
-      },
-      {
-        "url": "http://vjs.zencdn.net/v/oceans.webm",
-        "mimetype": "video/webm"
-      }
-    ]
-  },
-  {
     "id": "5",
-    "name": "Video 5",
+    "name": "Blender trailer (MP4)",
     "description": "Description of pod 5",
     "type": "video",
-    "duration": "500",
-    "total_rates": "999"
+    "duration": "52",
+    "total_rates": "999",
+    "poster": "http://media.w3.org/2010/05/sintel/poster.png",
+    "streams": [
+      {
+        "url": "http://media.w3.org/2010/05/sintel/trailer.mp4",
+        "mimetype": "video/mp4"
+      }
+    ]
   },
   {
     "id": "6",
