@@ -1,0 +1,42 @@
+<h1><code ng:non-bindable="">parse</code>
+<div><span class="hint">filter in module <code ng:non-bindable="">fmt</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="fmt-filter-page fmt-filter-parse-page"><p>Parses a string into boolean, number or JSON object</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><h3 id="usage_in-html-template-binding">In HTML Template Binding</h3>
+<div class="in-html-template-binding"><code ng:non-bindable=""><span>{{</span> parse_expression | parse <span>}}</span></code>
+</div>
+<h3 id="usage_in-javascript">In JavaScript</h3>
+<div class="in-javascript"><code ng:non-bindable="">$filter('parse')()</code>
+</div>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="fmt-filter-page fmt-filter-parse-page"><h4 id="example_source">Source</h4>
+<div source-edit="fmt" source-edit-deps="angular.js script.js" source-edit-html="index.html-7" source-edit-css="" source-edit-js="script.js-8" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-7" ng-html-wrap-loaded="fmt angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-7">
+  <div ng-controller="Ctrl">
+    <input type="text" class="input-block-level" ng-model="value"></input>
+    <pre>{{value|parse}} [type: {{typeof(value)}}]</pre>
+  </div>
+</script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-8"></pre>
+<script type="text/ng-template" id="script.js-8">
+  var Ctrl = function ($scope, $filter) {
+    $scope.typeof = function(input) {
+      return typeof $filter('parse')(input);
+    };
+  }
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="fmt" ng-set-html="index.html-7" ng-eval-javascript="script.js-8"></div>
+</div></div>
+</div>

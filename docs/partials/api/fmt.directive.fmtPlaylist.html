@@ -1,0 +1,85 @@
+<h1><code ng:non-bindable="">fmtPlaylist</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">fmt</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="fmt-directive-page fmt-directive-fmtplaylist-page"><p>HTML element that shows a list of items and synchronize them with the <a href="#/api/fmt.directive:fmtPlayer">player directive</a>.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY fmt-playlist
+     content="{string}"
+     [name-visible="{boolean}"]
+     [thumb-visible="{boolean}"]
+     [duration-visible="{boolean}"]
+     [likes-visible="{boolean}"]
+     [date-visible="{boolean}"]
+     [current-item-id="{number}"]
+     [auto-advance-enabled="{boolean}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>content</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="fmt-directive-page fmt-directive-fmtplaylist-page"><p>Specify the Flumotion list ID or JSON content URL to load items from.</p>
+</div></td></tr><tr><td>nameVisible <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="fmt-directive-page fmt-directive-fmtplaylist-page"><p>Shows items <code>name</code>. Visible by default.</p>
+</div></td></tr><tr><td>thumbVisible <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="fmt-directive-page fmt-directive-fmtplaylist-page"><p>Shows items <code>thumbnail</code>. Visible by default.</p>
+</div></td></tr><tr><td>durationVisible <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="fmt-directive-page fmt-directive-fmtplaylist-page"><p>Shows items <code>duration</code>. It requires thumbnail to be visible. Visible by default.</p>
+</div></td></tr><tr><td>likesVisible <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="fmt-directive-page fmt-directive-fmtplaylist-page"><p>Shows items <code>likes</code>. Visible by default.</p>
+</div></td></tr><tr><td>dateVisible <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="fmt-directive-page fmt-directive-fmtplaylist-page"><p>Shows items <code>creation date</code>. Hidden by default.</p>
+</div></td></tr><tr><td>currentItemId <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="fmt-directive-page fmt-directive-fmtplaylist-page"><p><code>ID</code> of the item selected by default. If this is not specified the playlist
+will select the first item of the list. Use <code>none</code> to skip selecting an item.</p>
+</div></td></tr><tr><td>autoAdvanceEnabled <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="fmt-directive-page fmt-directive-fmtplaylist-page"><p>Enables the auto-advance when the directive receives an event <code>fmtPodFinished</code>
+Disabled by default.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="fmt-directive-page fmt-directive-fmtplaylist-page"><h4 id="example_source">Source</h4>
+<div source-edit="fmt" source-edit-deps="angular.js script.js" source-edit-html="index.html-2" source-edit-css="style.css-4" source-edit-js="script.js-3" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-2" ng-html-wrap-loaded="fmt angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-2">
+  <div ng-controller="Ctrl">
+    <input type="text" class="input-block-level" ng-model="content"/>
+    <label><input type="checkbox" ng-model="nameVisible"/> name</label>
+    <label><input type="checkbox" ng-model="thumbVisible"/> thumb</label>
+    <label ng-show="thumbVisible"><input type="checkbox" ng-model="durationVisible"/> duration</label>
+    <label><input type="checkbox" ng-model="likesVisible"/> likes</label>
+    <label><input type="checkbox" ng-model="dateVisible"/> date</label>
+    <input type="number" class="input-block-level" ng-model="currentItemId" min="1"/>
+    <div fmt-playlist
+      content="{{content}}"
+      name-visible="{{nameVisible}}"
+      thumb-visible="{{thumbVisible}}"
+      duration-visible="{{durationVisible}}"
+      likes-visible="{{likesVisible}}"
+      date-visible="{{dateVisible}}"
+      current-item-id="{{currentItemId}}"
+      auto-advance-enabled="true">
+    </div>
+  </div>
+</script>
+</div>
+<div class="tab-pane" title="style.css">
+<pre class="prettyprint linenums" ng-set-text="style.css-4"></pre>
+<style type="text/css" id="style.css-4">
+  .fmt-w.playlist {
+    height: 400px;
+  }
+</style>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-3"></pre>
+<script type="text/ng-template" id="script.js-3">
+  var Ctrl = function($scope, $location) {
+    console.log($location);
+    $scope.content = 'fixtures/list_pods.json';
+    $scope.nameVisible = true;
+    $scope.thumbVisible = true;
+    $scope.durationVisible = true;
+    $scope.likesVisible = true;
+    $scope.dateVisible = true;
+    $scope.currentItemId = 4;
+  }
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="fmt" ng-set-html="index.html-2" ng-eval-javascript="script.js-3"></div>
+</div></div>
+</div>
