@@ -41,6 +41,15 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "fmt.directive:fmtWidget",
+      "shortName": "fmtWidget",
+      "type": "directive",
+      "moduleName": "fmt",
+      "shortDescription": "HTML element that loads a configure a Flumotion widget by ID.",
+      "keywords": "$scope api configure ctrl directive element flumotion fmt fmt-widget function height html js loads min module ng-controller ng-model number script style type var widget"
+    },
+    {
+      "section": "api",
       "id": "fmt.filter:duration",
       "shortName": "duration",
       "type": "filter",

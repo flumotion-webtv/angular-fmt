@@ -16,10 +16,10 @@
 </div>
 <h2 id="example">Example</h2>
 <div class="example"><div class="fmt-filter-page fmt-filter-parse-page"><h4 id="example_source">Source</h4>
-<div source-edit="fmt" source-edit-deps="angular.js script.js" source-edit-html="index.html-7" source-edit-css="" source-edit-js="script.js-8" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div source-edit="fmt" source-edit-deps="angular.js script.js" source-edit-html="index.html-9" source-edit-css="" source-edit-js="script.js-10" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
 <div class="tabbable"><div class="tab-pane" title="index.html">
-<pre class="prettyprint linenums" ng-set-text="index.html-7" ng-html-wrap-loaded="fmt angular.js script.js"></pre>
-<script type="text/ng-template" id="index.html-7">
+<pre class="prettyprint linenums" ng-set-text="index.html-9" ng-html-wrap-loaded="fmt angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-9">
   <div ng-controller="Ctrl">
     <input type="text" class="input-block-level" ng-model="value"></input>
     <pre>{{value|parse}} [type: {{typeof(value)}}]</pre>
@@ -27,8 +27,8 @@
 </script>
 </div>
 <div class="tab-pane" title="script.js">
-<pre class="prettyprint linenums" ng-set-text="script.js-8"></pre>
-<script type="text/ng-template" id="script.js-8">
+<pre class="prettyprint linenums" ng-set-text="script.js-10"></pre>
+<script type="text/ng-template" id="script.js-10">
   var Ctrl = function ($scope, $filter) {
     $scope.typeof = function(input) {
       return typeof $filter('parse')(input);
@@ -37,6 +37,6 @@
 </script>
 </div>
 </div><h4 id="example_demo">Demo</h4>
-<div class="well doc-example-live animate-container" ng-embed-app="fmt" ng-set-html="index.html-7" ng-eval-javascript="script.js-8"></div>
+<div class="well doc-example-live animate-container" ng-embed-app="fmt" ng-set-html="index.html-9" ng-eval-javascript="script.js-10"></div>
 </div></div>
 </div>
