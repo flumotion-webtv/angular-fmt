@@ -1,5 +1,5 @@
 <!-- VideoJS -->
-<div ng-if="config.playerHtml5==='videojs'" fmt-player-videojs pod="pod" config="config"></div>
+<div ng-if="config.playerHtml5==='videojs'" fmt-player-videojs pod="pod" config="config" on-ready="onReady({player: player})"></div>
 
 <!-- Browser -->
 <div ng-if="config.playerHtml5==='browser'" fmt-player-browser pod="pod" config="config"></div>
