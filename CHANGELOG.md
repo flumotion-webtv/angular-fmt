@@ -1,3 +1,32 @@
+<a name="0.1.3"></a>
+### 0.1.3 (2014-06-16)
+
+
+#### Bug Fixes
+
+* **player:**
+  * fix player SWF base path ((74196ec7))
+
+
+#### Features
+
+* **player:** fmt-player callback to manage it using the Video.js API [#72439970] ((e8d18e30))
+
+
+#### Breaking Changes
+
+* Now 'audio/current' won't be automatically added to the path.
+
+To migrate, change your code to the following:
+
+`player-swf-base-url="path-to-players-folder/"`
+
+To:
+
+`player-swf-base-url="path-to-players-folder/audio/current"`
+ ((74196ec7))
+
+
 <a name="0.1.2"></a>
 ### 0.1.2 (2014-06-05)
 
