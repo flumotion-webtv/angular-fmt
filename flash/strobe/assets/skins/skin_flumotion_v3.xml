@@ -1,0 +1,27 @@
+<skin imagesLibraryPath="assets/skins/images_flumotion_v3.swf">
+	<zones>
+		<zone id="controlbar_left" padding_left="2" padding_right="19" />
+		<zone id="controlbar_center" />
+		<zone id="controlbar_right" padding_left="15" padding_right="2" />
+	</zones>
+	
+	<containers>
+		<container id="playback" zone="controlbar_left" position="1" />
+		<container id="scrubbar" zone="controlbar_center" liveTrackEnabled="false" />
+		<container id="visualseeking" zone="controlbar_center" />
+		<container id="time" zone="controlbar_right" position="1" layoutMode="vertical" fontSize="11" />
+		<container id="volume" zone="controlbar_right" position="2" padding_left="3" layoutMode="vertical" />
+		<container id="hotbuttons" zone="controlbar_right" position="3" padding_left="3" gap="3" />
+		<container id="captions" zone="controlbar_right" position="4" padding_left="3" textColor="0xffffff" textColorOver="2" textColorDisabled="2" />
+		<container id="qualities" zone="controlbar_right" position="5" textColor="0xffffff" textColorOver="2" textColorDisabled="2" />
+		<container id="audio_selector" zone="controlbar_right" position="6" textColor="0xffffff" textColorOver="2" textColorDisabled="2" />
+		<container id="fullscreen" zone="controlbar_right" position="7" padding_left="3" />
+	</containers>
+	
+    <elements>
+        <element id="scrub_loaded" alpha="0.5"/>
+        <element id="scrub_loaded_end" alpha="0.5"/>
+		<element id="scrub_right" filter="tintColor" filterColor="1" alpha="0.1"/>
+        <element id="menudisplay_backdrop" filter="tintColor" filterColor="5" alpha="0.3"/>
+    </elements>
+</skin>

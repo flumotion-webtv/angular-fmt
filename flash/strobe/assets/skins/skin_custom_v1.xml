@@ -1,0 +1,20 @@
+<skin imagesLibraryPath="assets/skins/images_custom_v1.swf">
+	<zones>
+		<zone id="controlbar_left" padding_left="5" padding_right="15" />
+		<zone id="controlbar_center" />
+		<zone id="controlbar_right" padding_left="15" padding_right="5" />
+	</zones>
+	
+	<containers>
+		<container id="playback" zone="controlbar_left" position="1" padding_right="8" />
+		<container id="volume" zone="controlbar_left" position="2" layoutMode="horizontal" gap="5" />
+		<container id="time" zone="controlbar_left" position="3" textColor="0xffffff" />
+		<container id="visualseeking" zone="controlbar_center" />
+		<container id="scrubbar" zone="controlbar_center" liveTrackEnabled="false" />
+		<container id="hotbuttons" zone="controlbar_right" position="1" />
+		<container id="captions" zone="controlbar_right" position="2" textColor="0xffffff" textColorDisabled="2" />
+		<container id="qualities" zone="controlbar_right" position="3" textColor="0xffffff" textColorDisabled="2" useIcon="true" />
+		<container id="audio_selector" zone="controlbar_right" position="4" textColor="0xffffff" textColorDisabled="2" useIcon="true" />
+		<container id="fullscreen" zone="controlbar_right" position="5" />
+	</containers>
+</skin>

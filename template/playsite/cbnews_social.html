@@ -1,0 +1,56 @@
+<div fmt-layout="overlay" style="height: 100%" ng-controller="CbnewsCtrl">
+  <div fmt-player
+       content="{{content}}"
+       skin="cbnews_v1"
+       data-fmt-flex=1 style="bottom: 0px;"></div>
+
+  <div id="social" class="fmt fmt-social cbnews_v1" ng-init="collapsed = true" style="display: none;">
+    <div ng-show=!error>
+      <div class="table share">
+        <div class="row">
+          <table class="table collapsed">
+            <tr>
+              <td class=pod-info>
+                <a class="name" target=_blank ng-href="{{url}}">{{pod.title || pod.name}}</a>
+                <span class="extra-field">{{fields.marque}}</span>
+                <span class="extra-field" ng-if="fields.pays">-&nbsp;&nbsp;&nbsp;&nbsp;{{fields.pays}}</span>
+              </td>
+              <td class="actions">
+                <a class=logo target=_blank href="http://www.culturepub.fr"></a>
+                <button class=expand ng-click="collapsed = !collapsed"
+                        ng-class="collapsed?'':'disabled'"></button>
+                <button class=like ng-click="like()" ng-disabled=likeDisabled>{{pod.total_rates}}</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div ng-hide="collapsed">
+        <div class="table social">
+          <div class="row url">
+            <div class="cell icon"></div>
+            <div class="cell value embed">
+              <input type=text readonly=readonly value="{{sharingUrl}}">
+            </div>
+            <div class="cell action">
+              <div class="social"
+                   use-preferred="false"
+                   buttons="facebook,twitter,google_plusone_share"></div>
+            </div>
+          </div>
+        </div>
+        <div class="table iframe">
+          <div class="row iframe">
+            <div class="cell icon"></div>
+            <div class="cell value">
+              <input class="auto" type=text readonly=readonly value="{{sharingIframe}}">
+            </div>
+          </div>
+        </div>
+        <div class="close">
+          <span class="closeButton" ng-click="collapsed = true"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

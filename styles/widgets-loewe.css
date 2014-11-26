@@ -1,0 +1,45 @@
+.fmt-player .vjs-default-skin {
+  color: white;
+  /* hide unnecessary components */
+  /* background */
+  /* progress */
+  /* move the progress bar inside controls */
+  /* play button */
+  /* volume */ }
+  .fmt-player .vjs-default-skin .vjs-big-play-button,
+  .fmt-player .vjs-default-skin .vjs-fullscreen-control,
+  .fmt-player .vjs-default-skin .vjs-poster,
+  .fmt-player .vjs-default-skin .vjs-loading-spinner:before,
+  .fmt-player .vjs-default-skin .vjs-time-controls,
+  .fmt-player .vjs-default-skin .vjs-time-divider,
+  .fmt-player .vjs-default-skin .vjs-volume-control,
+  .fmt-player .vjs-default-skin .vjs-slider-handle {
+    display: none; }
+  .fmt-player .vjs-default-skin .vjs-control-bar {
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    height: 33px; }
+  .fmt-player .vjs-default-skin .vjs-slider,
+  .fmt-player .vjs-default-skin .vjs-load-progress {
+    background-color: white;
+    border-radius: 3px; }
+  .fmt-player .vjs-default-skin .vjs-play-progress {
+    background: none;
+    background-color: black; }
+  .fmt-player .vjs-default-skin .vjs-progress-holder .vjs-play-progress,
+  .fmt-player .vjs-default-skin .vjs-progress-holder .vjs-load-progress {
+    height: 2px;
+    left: 1px;
+    top: 1px;
+    bottom: 1px; }
+  .fmt-player .vjs-default-skin .vjs-progress-control {
+    position: absolute;
+    top: 13px;
+    left: 90px;
+    right: 35px;
+    height: 4px; }
+  .fmt-player .vjs-default-skin .vjs-play-control {
+    left: 10px; }
+  .fmt-player .vjs-default-skin .vjs-mute-control {
+    float: left;
+    left: -7px; }

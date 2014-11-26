@@ -1,0 +1,38 @@
+<div fmt-layout="horizontal" style="height: 100%">
+  <div fmt-player
+       skin="cbnews_v1"
+       data-fmt-flex=1 style="bottom: 0px;"></div>
+  <div fmt-playlist class="cbnews_v1"
+       content="{{content}}"
+       auto-advance-enabled="true"
+       columns="2"
+       data-fmt-flex="340px"></div>
+</div>
+
+<script id="template/playlist/playlist.html" type="text/ng-template">
+  <div class="list-group container-fluid" style="padding: 0; margin-bottom: 0; height: 100%; overflow: auto;">
+    <a ng-repeat="item in items"
+       fmt-playlist-item
+       item="item"
+       fields="config.itemFields"
+       ng-href=""
+       ng-click="selectItem(item)"
+       class="list-group-item"
+       ng-class="itemClass(item)">
+    </a>
+  </div>
+</script>
+
+<script id="template/playlist/playlist-item.html" type="text/ng-template">
+  <div class="media">
+    <div class="pull-left thumb-wrap">
+      <div class="img-border">
+        <img data-ng-src="{{item.thumbnail_url}}" class="pull-left">
+        <div class="img-overlay"></div>
+      </div>
+    </div>
+    <div class="media-body">
+      <h4 class="list-group-item-heading">{{item.name || item.title}}</h4>
+    </div>
+  </div>
+</script>

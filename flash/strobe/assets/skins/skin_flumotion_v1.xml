@@ -1,0 +1,20 @@
+<skin imagesLibraryPath="assets/skins/images_flumotion_v1.swf">
+	<zones>
+		<zone id="controlbar_left" />
+		<zone id="controlbar_center" />
+		<zone id="controlbar_right" />
+	</zones>
+	
+	<containers>
+		<container id="playback" zone="controlbar_left" position="1" />
+		<container id="time" zone="controlbar_center" position="1" textColor="0x000000" layoutMode="vertical" />
+		<container id="scrubbar" zone="controlbar_center" liveTrackEnabled="false" />
+		<container id="visualseeking" zone="controlbar_center" />
+		<container id="hotbuttons" zone="controlbar_right" position="1" />
+		<container id="volume" zone="controlbar_right" position="2" layoutMode="horizontal" />
+		<container id="captions" zone="controlbar_right" position="3" />
+		<container id="qualities" zone="controlbar_right" position="4" />
+		<container id="audio_selector" zone="controlbar_right" position="5" />
+		<container id="fullscreen" zone="controlbar_right" position="6" />
+	</containers>
+</skin>

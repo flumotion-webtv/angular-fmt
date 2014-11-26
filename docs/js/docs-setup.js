@@ -5,12 +5,48 @@ NG_DOCS={
   "pages": [
     {
       "section": "api",
+      "id": "angularFmtApp.bitly",
+      "shortName": "angularFmtApp.bitly",
+      "type": "service",
+      "moduleName": "angularFmtApp",
+      "shortDescription": "bitly",
+      "keywords": "angularfmtapp api bitly service"
+    },
+    {
+      "section": "api",
+      "id": "fmt.components.services.parser",
+      "shortName": "fmt.components.services.parser",
+      "type": "service",
+      "moduleName": "fmt.components.services",
+      "shortDescription": "parser",
+      "keywords": "api components fmt parser service services"
+    },
+    {
+      "section": "api",
+      "id": "fmt.controller:CbnewsCtrl",
+      "shortName": "CbnewsCtrl",
+      "type": "function",
+      "moduleName": "fmt",
+      "shortDescription": "CbnewsCtrl",
+      "keywords": "api cbnewsctrl controller fmt function"
+    },
+    {
+      "section": "api",
       "id": "fmt.directive:fmtAddthis",
       "shortName": "fmtAddthis",
       "type": "directive",
       "moduleName": "fmt",
       "shortDescription": "AddThis toolbox wrapper that automatically gets synchronized with the pod selected by other Flumotion widgets like playlist directive.",
       "keywords": "$scope addthis addthis-description addthis-title addthisdescription addthistitle api automatically buttons case checkbox class comma-separated ctrl default description directive directory example facebook false flumotion fmt fmt-addthis form-inline function google_plusone_share html http info input-block-level js large linkedin manage min module ng-controller ng-disabled ng-model num-preferred number numpreferred options owned playlist pod preferred pubid ra-52f8a2223eb7c112 script selected service services size small string synchronized text title toolbox true tuenti twitter type url use-preferred usepreferred var versus widgets wrapper"
+    },
+    {
+      "section": "api",
+      "id": "fmt.directive:fmtMetadata",
+      "shortName": "fmtMetadata",
+      "type": "directive",
+      "moduleName": "fmt",
+      "shortDescription": "metadata",
+      "keywords": "api directive fmt metadata"
     },
     {
       "section": "api",
@@ -23,12 +59,21 @@ NG_DOCS={
     },
     {
       "section": "api",
-      "id": "fmt.directive:fmtPlayerDash",
-      "shortName": "fmtPlayerDash",
+      "id": "fmt.directive:fmtPlayerBrowser",
+      "shortName": "fmtPlayerBrowser",
       "type": "directive",
       "moduleName": "fmt",
-      "shortDescription": "Player compatible with DASH.",
-      "keywords": "api commondatastorage compatible content dash directive fmt fmt-player-dash googleapis html http module mpd player url"
+      "shortDescription": "playerBrowser",
+      "keywords": "api directive fmt playerbrowser"
+    },
+    {
+      "section": "api",
+      "id": "fmt.directive:fmtPlayerVideojs",
+      "shortName": "fmtPlayerVideojs",
+      "type": "directive",
+      "moduleName": "fmt",
+      "shortDescription": "playerVideojs",
+      "keywords": "api directive fmt playervideojs"
     },
     {
       "section": "api",

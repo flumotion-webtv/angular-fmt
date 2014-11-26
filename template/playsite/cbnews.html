@@ -1,13 +1,91 @@
-<div data-flumotion-layout=horizontal style="height: 100%">
-    <div data-flumotion-layout=overlay>
-        <div data-flumotion-player data-fmt-skin=cbnews_v1 data-fmt-control-bar-tooltips-enabled=true data-fmt-flex=1></div>
-        <div data-flumotion-social data-fmt-skin=cbnews_v1 data-fmt-info-visible="true" data-fmt-info-name-visible="true"
-            data-fmt-info-description-visible="false" data-fmt-info-extra-fields-visible="true" data-fmt-info-likes-visible="true"
-            data-fmt-info-logo-visible="true" data-fmt-info-collapse-visible="true" data-fmt-collapsed="true" data-fmt-height-collapsed="30px"
-            data-fmt-height-expanded="145px" data-fmt-logo-click-through="http://www.culturepub.fr" data-fmt-social-sharing-visible="true"
-            data-fmt-social-sharing-buttons="facebook,twitter,google" data-fmt-embed-code-visible="true"
-            data-fmt-sharing-url="http://www.culturepub.fr/videos/[[pod.title|slug]]-[[((pod.extra_fields|filter:'marque')[0].value + ' ' + (pod.extra_fields|filter:'produit')[0].value)|slug]]"></div>
+<div fmt-layout="horizontal" style="height: 100%" ng-controller="CbnewsCtrl">
+  <div fmt-layout="overlay" flex="1">
+    <div fmt-player
+         skin="cbnews_v1"
+         data-fmt-flex=1 style="bottom: 0px;"></div>
+
+    <div id="social" class="fmt fmt-social cbnews_v1" ng-init="collapsed = true" style="display: none;">
+      <div ng-show=!error>
+        <div class="table share">
+          <div class="row">
+            <table class="table collapsed">
+              <tr>
+                <td class=pod-info>
+                  <a class="name" target=_blank ng-href="{{url}}">{{pod.title || pod.name}}</a>
+                  <span class="extra-field">{{fields.marque}}</span>
+                  <span class="extra-field" ng-if="fields.pays">-&nbsp;&nbsp;&nbsp;&nbsp;{{fields.pays}}</span>
+                </td>
+                <td class="actions">
+                  <a class=logo target=_blank href="http://www.culturepub.fr"></a>
+                  <button class=expand ng-click="collapsed = !collapsed"
+                          ng-class="collapsed?'':'disabled'"></button>
+                  <button class=like ng-click="like()" ng-disabled=likeDisabled>{{pod.total_rates}}</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div ng-hide="collapsed">
+          <div class="table social">
+            <div class="row url">
+              <div class="cell icon"></div>
+              <div class="cell value embed">
+                <input type=text readonly=readonly value="{{sharingUrl}}">
+              </div>
+              <div class="cell action">
+                <div class="social"
+                     fmt-addthis
+                     use-preferred="false"
+                     buttons="facebook,twitter,google_plusone_share"></div>
+              </div>
+            </div>
+          </div>
+          <div class="table iframe">
+            <div class="row iframe">
+              <div class="cell icon"></div>
+              <div class="cell value">
+                <input class="auto" type=text readonly=readonly value="{{sharingIframe}}">
+              </div>
+            </div>
+          </div>
+          <div class="close">
+            <span class="closeButton" ng-click="collapsed = true"></span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div data-flumotion-playlist data-fmt-skin=cbnews_v1 data-fmt-duration-visible=false data-fmt-likes-visible=false data-fmt-num-columns=2
-        data-fmt-flex=340px></div>
+  </div>
+  <div fmt-playlist class="cbnews_v1"
+       content="{{content}}"
+       auto-advance-enabled="true"
+       columns="2"
+       data-fmt-flex="340px"></div>
 </div>
+
+<script id="template/playlist/playlist.html" type="text/ng-template">
+  <div class="list-group container-fluid" style="padding: 0; margin-bottom: 0; height: 100%; overflow: auto;">
+    <a ng-repeat="item in items"
+       fmt-playlist-item
+       item="item"
+       fields="config.itemFields"
+       ng-href=""
+       ng-click="selectItem(item)"
+       class="list-group-item"
+       ng-class="itemClass(item)">
+    </a>
+  </div>
+</script>
+
+<script id="template/playlist/playlist-item.html" type="text/ng-template">
+  <div class="media">
+    <div class="pull-left thumb-wrap">
+      <div class="img-border">
+        <img data-ng-src="{{item.thumbnail_url}}" class="pull-left">
+        <div class="img-overlay"></div>
+      </div>
+    </div>
+    <div class="media-body">
+      <h4 class="list-group-item-heading">{{item.name || item.title}}</h4>
+    </div>
+  </div>
+</script>

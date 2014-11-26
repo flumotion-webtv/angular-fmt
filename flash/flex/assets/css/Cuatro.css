@@ -1,0 +1,236 @@
+
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/halo";
+@namespace viewmanager "com.flumotion.plugins.viewmanager.*";
+
+
+global
+{
+}
+
+viewmanager|AbstractView s|Group.menuButtonContainer s|Button 
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.flumotion.MenuBaseSkin');
+}
+
+s|Button.MediaCenterButton
+{
+	skinClass: 	ClassReference('com.flumotion.plugins.cuatro.wall.TopButtonSkin')
+}
+
+s|RichText.title {
+	font-size: 20;
+	color: #ffffff;
+}
+
+s|RichText.info {
+	font-size: 15;
+	color: #ffffff;
+}
+
+s|Button.backToLive {
+	skinClass: ClassReference('com.flumotion.plugins.timeshifting.skins.TimeShiftingButtonSkin');
+	iconName: "backToLive";
+	iconScale: 0.75;
+}
+
+s|Button.recover {
+	skinClass: ClassReference('com.flumotion.plugins.timeshifting.skins.TimeShiftingButtonSkin');
+	iconName: "recover";
+	iconScale: 0.75;
+}
+
+viewmanager|PlayerMenuView s|Group.menuButtonContainer s|ToggleButton 
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.flumotion.MenuToggleButtonBaseSkin');
+}
+
+.MenuMailButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.EmailDockIcon')
+}
+
+.MenuShareButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.ShareDockIcon')
+}
+
+.MenuEmbedButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.EmbedDockIcon')
+}
+
+.MenuCaptionButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.CaptionsDockIcon')
+}
+
+.MenuCommentsButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.CommentsDockIcon')
+}
+
+.MenuTimeLineButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.TimeLineDockIcon')
+}
+
+.MenuUserButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.UserDockIcon')
+}
+
+.MenuVotingButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.VotingDockIcon')
+}
+
+.MenuRelatedButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.RelatedDockIcon')
+}
+
+.MenuInfoButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.InfoDockIcon')
+}
+
+.MenuDownloadButton
+{
+	iconClass: ClassReference('com.flumotion.plugins.dock.skins.library.DownloadDockIcon')
+}
+
+.MenuLanguageButton
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.flumotion.CaptionLanguageButtonSkin');
+}
+
+@font-face 
+{
+	src: url("assets/fonts/HelveticaRoundedLTStd-BdCn.otf");
+	fontFamily: Flumotion4Spark;
+	embedAsCFF: true;
+	unicodeRange: "U+00C7,U+00E7,U+0061-U+007A,U+0041-U+005A,U+0030-U+0039,U+0025, U+002A,U+002B,U+002D,U+002F, U+003C,U+003D,U+003E,U+002C, U+003A,U+003B,U+002,U+0021,U+00A1,U+003F,U+00BA, U+00AA, U+007C,U+0040,U+00B7,U+0022,U+0023,U+0026-U+0029,U+0024, U+00E1,U+00E9,U+00ED,U+00F3,U+00FA,U+00C1,U+00C9, U+00CD,U+00D3,U+00DA,U+00D1,U+00F1,U+00BF,U+20A,U+002C,U+003A,U+003B,U+002E, U+00BA,U+00AA,U+007C,U+0040,U+00B7,U+0022,U+0023,U+0026-U+002";
+/*	unicodeRange: 'U+0020,U+0030-U+003A,U+0041-U+005A'*/
+	/* TODO import only needed unicode characters */
+}
+
+
+
+/* DOCK */
+
+.PlayButton
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.cuatro.LogoBaseButtonSkin');
+	iconClass: ClassReference("com.flumotion.plugins.dock.skins.library.PlayDockIcon");
+	iconColor: #FFFFFF;
+}
+
+.PauseButton
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.cuatro.BaseButtonSkin');
+	iconClass: ClassReference("com.flumotion.plugins.dock.skins.library.PauseDockIcon");
+	iconColor: #7b7b7b;
+}
+
+.Scrubber
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.cuatro.ScrubBarSkin');
+}
+
+.MenuButton
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.cuatro.BaseToggleButtonSkin');
+	iconClass: ClassReference("com.flumotion.plugins.dock.skins.library.MenuDockIcon");
+	iconColor: #7b7b7b;
+}
+
+.InfoMenuButton
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.cuatro.BaseToggleButtonSkin');
+	iconClass: ClassReference("com.flumotion.plugins.dock.skins.library.MenuInfoDockIcon");
+	iconColor: #7b7b7b;
+}
+
+.QualityButton
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.cuatro.BaseButtonSkin');
+	iconClass: ClassReference("com.flumotion.plugins.dock.skins.library.cuatro.QualityDockIcon");
+	iconColor: #7b7b7b;
+}
+
+.FullScreenButton
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.cuatro.BaseButtonSkin');
+	iconClass: ClassReference("com.flumotion.plugins.dock.skins.library.FullscreenDockIcon");
+	iconColor: #505050;
+}
+
+.VolumeButton {
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.cuatro.VolumeSkin');
+	ratingIcon: ClassReference('com.flumotion.plugins.dock.skins.library.VolumeBarFXG');
+	passiveIconColor: #aaaaaa;
+	activeIconColor: #00FF00;
+	baseColor: #ff0000;
+	iconColor: #FFFFFF;
+	enableButtonMask: false;
+}
+
+.Separator
+{
+	skinClass: ClassReference('com.flumotion.plugins.dock.skins.components.cuatro.SeparatorSkin');
+	
+	gradientPrimaryColor: #505050;
+	gradientSecondaryColor: #505050;
+}
+
+s|RichText, s|Label, s|TextArea
+{
+	font-family: Flumotion4Spark;
+}
+
+.PlayerInputTextInfo
+{
+	font-family: Flumotion4Spark;
+}
+
+.ExtraLayer
+{
+	skinClass: ClassReference('com.flumotion.plugins.cuatro.wall.WallSkin');
+}
+
+/* TODO: This should be loaded by the plugin */
+/* Advertisments styles  */
+
+.AdvertismentCloseButton
+{
+	indicatorSkinClass: ClassReference('com.flumotion.plugins.advertising.skins.AdvertismentCloseButtonSkin');
+	position: "tr";
+	padding: 4;
+	visible: false;
+	delay:2;
+	clickThroughOnClose:false;
+}
+
+.AdvertismentIndicator
+{
+	indicatorSkinClass: ClassReference('com.flumotion.plugins.advertising.skins.CuatroAdvertismentIndicatorSkin');
+	position: "tr";
+	padding: 10;
+	visible: true;
+}
+
+.AdvertismentTicker
+{
+	skinClass: ClassReference('com.flumotion.plugins.advertising.skins.CuatroTickerDisplaySkin');
+	fontColor: #FFFFFF;
+}
+
+.Dock
+{
+	primaryColor:#FF0000;
+	secondaryColor:#FF0000;
+	height:20;
+}
+
