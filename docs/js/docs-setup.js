@@ -5,39 +5,21 @@ NG_DOCS={
   "pages": [
     {
       "section": "api",
-      "id": "angularFmtApp.bitly",
-      "shortName": "angularFmtApp.bitly",
-      "type": "service",
-      "moduleName": "angularFmtApp",
-      "shortDescription": "bitly",
-      "keywords": "angularfmtapp api bitly service"
-    },
-    {
-      "section": "api",
-      "id": "fmt.components.services.parser",
-      "shortName": "fmt.components.services.parser",
-      "type": "service",
-      "moduleName": "fmt.components.services",
-      "shortDescription": "parser",
-      "keywords": "api components fmt parser service services"
-    },
-    {
-      "section": "api",
-      "id": "fmt.controller:CbnewsCtrl",
-      "shortName": "CbnewsCtrl",
-      "type": "function",
-      "moduleName": "fmt",
-      "shortDescription": "CbnewsCtrl",
-      "keywords": "api cbnewsctrl controller fmt function"
-    },
-    {
-      "section": "api",
       "id": "fmt.directive:fmtAddthis",
       "shortName": "fmtAddthis",
       "type": "directive",
       "moduleName": "fmt",
       "shortDescription": "AddThis toolbox wrapper that automatically gets synchronized with the pod selected by other Flumotion widgets like playlist directive.",
       "keywords": "$scope addthis addthis-description addthis-title addthisdescription addthistitle api automatically buttons case checkbox class comma-separated ctrl default description directive directory example facebook false flumotion fmt fmt-addthis form-inline function google_plusone_share html http info input-block-level js large linkedin manage min module ng-controller ng-disabled ng-model num-preferred number numpreferred options owned playlist pod preferred pubid ra-52f8a2223eb7c112 script selected service services size small string synchronized text title toolbox true tuenti twitter type url use-preferred usepreferred var versus widgets wrapper"
+    },
+    {
+      "section": "api",
+      "id": "fmt.directive:fmtJwplayer",
+      "shortName": "fmtJwplayer",
+      "type": "directive",
+      "moduleName": "fmt",
+      "shortDescription": "Includes a configurable JW Player compatible with Flumotion OVRP.",
+      "keywords": "angular api audio casting classes compatible configurable content css directive ea flumotion fmt fmt-jwplayer fmtbaseurl height html http includes js jw load module ovrp parsed player playerid reproduce script set source src style url video webtvpp02 window"
     },
     {
       "section": "api",
@@ -54,26 +36,8 @@ NG_DOCS={
       "shortName": "fmtPlayer",
       "type": "directive",
       "moduleName": "fmt",
-      "shortDescription": "HTML element that shows a player.",
-      "keywords": "add agent analytics api audio auto-play automatically autoplayenabled browser content css current de default defines directive ea element enables flash flumotion fmt fmt-player fmt-w force google hashbang height html html5 html5_flash html5_flash_dashjs http image module mp4 options order player player-flash player-html5 playerflash playerhtml5 pod poster posterurl reproduce select send seoenabled set src statistics statsenabled stream strobe strobe16 style supported tech-order technologies technology techorder true url video videojs vorwaerts-gmbh"
-    },
-    {
-      "section": "api",
-      "id": "fmt.directive:fmtPlayerBrowser",
-      "shortName": "fmtPlayerBrowser",
-      "type": "directive",
-      "moduleName": "fmt",
-      "shortDescription": "playerBrowser",
-      "keywords": "api directive fmt playerbrowser"
-    },
-    {
-      "section": "api",
-      "id": "fmt.directive:fmtPlayerVideojs",
-      "shortName": "fmtPlayerVideojs",
-      "type": "directive",
-      "moduleName": "fmt",
-      "shortDescription": "playerVideojs",
-      "keywords": "api directive fmt playervideojs"
+      "shortDescription": "Includes a configurable player compatible with Flumotion OVRP.",
+      "keywords": "agent api assign audio auto-play autoplayenabled browser callback called casting classes compatible configurable content css default defines directive directly docs ea easily enables events flash flumotion fmt fmt-player fmtbaseurl function height html html5 html5_flash http https image includes initialised instance js md method methods model module native ng-click on-ready onplayerready onready options order ovrp parameter parsed pause play player playerflash playerhtml5 playerinstance poster posterurl receives reproduce script select set strobe strobe16 style supported technologies technology techorder true url video videojs visit volume webtvpp02 window"
     },
     {
       "section": "api",
@@ -125,6 +89,7 @@ NG_DOCS={
     "api": true
   },
   "html5Mode": false,
+  "editExample": false,
   "startPage": "/api",
   "scripts": [
     "jquery.min.js",

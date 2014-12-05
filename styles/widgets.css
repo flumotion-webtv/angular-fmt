@@ -5442,3 +5442,10 @@ body {
 
 .fmt.fmt-player .vjs-default-skin.vjs-skin-transparent {
   background-color: transparent; }
+
+.fmt-jwplayer {
+  background-color: black; }
+  .fmt-jwplayer .jwlogo {
+    display: none; }
+  .fmt-jwplayer .jwoverlay > .jwcontents > .jwmenu > .jwoption {
+    text-transform: capitalize; }

@@ -1,0 +1,49 @@
+<h1><code ng:non-bindable="">fmtJwplayer</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">fmt</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="fmt-directive-page fmt-directive-fmtjwplayer-page"><p>Includes a configurable JW Player compatible with Flumotion OVRP.</p>
+<h3 id="description_css-classes">CSS classes</h3>
+<ul>
+<li><code>fmt-jwplayer</code> is set when the directive has been parsed.</li>
+</ul>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;fmt-jwplayer
+       content="{string}"
+       [player-id="{number}"]&gt;
+&lt;/fmt-jwplayer&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY fmt-jwplayer
+     content="{string}"
+     [player-id="{number}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>content</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="fmt-directive-page fmt-directive-fmtjwplayer-page"><p>Source URL or Flumotion ID of the video / audio to reproduce.</p>
+</div></td></tr><tr><td>playerId <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="fmt-directive-page fmt-directive-fmtjwplayer-page"><p>ID of a Flumotion player</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="fmt-directive-page fmt-directive-fmtjwplayer-page"><h4 id="example_source">Source</h4>
+<div source-edit="fmt" source-edit-deps="angular.js script.js" source-edit-html="index.html-1" source-edit-css="" source-edit-js="script.js-0" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-1" ng-html-wrap-loaded="fmt angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-1">
+  <!-- Angular directive for JW Player -->
+  <div fmt-jwplayer content="424" style="height: 275px;"></div>
+
+  <!-- Load JW Player script -->
+  <script src="../vendor/jwplayer/jwplayer.js"></script>
+  
+</script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-0"></pre>
+<script type="text/ng-template" id="script.js-0">
+    window.fmtBaseUrl = 'http://bo.casting.webtvpp02.flumotion.com';
+  </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="fmt" ng-set-html="index.html-1" ng-eval-javascript="script.js-0"></div>
+</div></div>
+</div>

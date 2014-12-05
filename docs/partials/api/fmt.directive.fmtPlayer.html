@@ -4,65 +4,71 @@
 </div>
 </h1>
 <div><h2 id="description">Description</h2>
-<div class="description"><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>HTML element that shows a player.</p>
+<div class="description"><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>Includes a configurable player compatible with Flumotion OVRP.</p>
+<h3 id="description_css-classes">CSS classes</h3>
+<ul>
+<li><code>fmt-player</code> is set when the directive has been parsed.</li>
+</ul>
 </div></div>
 <h2 id="usage">Usage</h2>
 <div class="usage">as element:<pre class="prettyprint linenums">&lt;fmt-player
        content="{string}"
-       [src="{string}"]
        [player-html5="{string}"]
        [player-flash="{string}"]
        [tech-order="{string}"]
        [poster-url="{string}"]
        [autoplay-enabled="{boolean}"]
-       [seo-enabled="{boolean}"]
-       [stats-enabled="{boolean}"]&gt;
+       [on-ready="{expression}"]&gt;
 &lt;/fmt-player&gt;</pre>
 as attribute<pre class="prettyprint linenums">&lt;ANY fmt-player
      content="{string}"
-     [src="{string}"]
      [player-html5="{string}"]
      [player-flash="{string}"]
      [tech-order="{string}"]
      [poster-url="{string}"]
      [autoplay-enabled="{boolean}"]
-     [seo-enabled="{boolean}"]
-     [stats-enabled="{boolean}"]&gt;
+     [on-ready="{expression}"]&gt;
    ...
 &lt;/ANY&gt;</pre>
 <h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>content</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>Flumotion ID of the video / audio to reproduce.</p>
-</div></td></tr><tr><td>src <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>Specify a stream URL to force it instead of using an ID.</p>
 </div></td></tr><tr><td>playerHtml5 <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>Select the player to use for HTML5 technology. Options are <code>browser</code> and <code>videojs</code>.</p>
 </div></td></tr><tr><td>playerFlash <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>Select the player to use for Flash technology. Options are <code>strobe</code>, <code>strobe16</code> and <code>videojs</code>.</p>
-</div></td></tr><tr><td>techOrder <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>Defines the order of technologies using the first supported by the agent. By default it is <code>html5_flash_dashjs</code>.</p>
+</div></td></tr><tr><td>techOrder <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>Defines the order of technologies using the first supported by the agent. By default it is <code>html5_flash</code>.</p>
 </div></td></tr><tr><td>posterUrl <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>URL of the image to use as a video poster.</p>
 </div></td></tr><tr><td>autoplayEnabled <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>Enables the auto-play if <code>true</code>.</p>
-</div></td></tr><tr><td>seoEnabled <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>If set to <code>true</code> it will automatically add the current pod information to the URL using hashbang.</p>
-</div></td></tr><tr><td>statsEnabled <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>If set to <code>true</code> it will send statistics to Flumotion and Google Analytics.</p>
+</div></td></tr><tr><td>onReady <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-expression">expression</a></td><td><div class="fmt-directive-page fmt-directive-fmtplayer-page"><p>Callback function that will be called when the Video.js has been initialised.
+This function receives the player as a parameter, so you can easily use any Video.js player native method:</p>
+<pre><code>               on-ready=&quot;onPlayerReady(player)&quot;
+</code></pre><p>Or you can assign the instance directly to the model:</p>
+<pre><code>               on-ready=&quot;playerInstance = player&quot;
+</code></pre><p>For information about available methods and events please visit the Video.js <a href="https://github.com/videojs/video.js/blob/stable/docs/api/vjs.Player.md#index">player API docs</a></p>
 </div></td></tr></tbody></table></div>
 <h2 id="example">Example</h2>
 <div class="example"><div class="fmt-directive-page fmt-directive-fmtplayer-page"><h4 id="example_source">Source</h4>
-<div source-edit="fmt" source-edit-deps="angular.js" source-edit-html="index.html-0" source-edit-css="style.css" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div source-edit="fmt" source-edit-deps="angular.js script.js" source-edit-html="index.html-2" source-edit-css="style.css" source-edit-js="script.js-3" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
 <div class="tabbable"><div class="tab-pane" title="index.html">
-<pre class="prettyprint linenums" ng-set-text="index.html-0" ng-html-wrap-loaded="fmt angular.js"></pre>
-<script type="text/ng-template" id="index.html-0">
-  <div fmt-player
-    src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-    player-html5="videojs"
-    player-flash="videojs"
-    tech-order="html5_flash">
-  </div>
+<pre class="prettyprint linenums" ng-set-text="index.html-2" ng-html-wrap-loaded="fmt angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-2">
+  <div fmt-player content="424" volume="0.1" on-ready="playerInstance = player"></div>
+  <button ng-click="playerInstance.play()">Play</button>
+  <button ng-click="playerInstance.pause()">Pause</button>
 </script>
 </div>
 <div class="tab-pane" title="style.css">
 <pre class="prettyprint linenums" ng-set-text="style.css"></pre>
 <style type="text/css" id="style.css">
-  .fmt-w.player {
+  .fmt-player {
     height: 275px;
   }
 </style>
 </div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-3"></pre>
+<script type="text/ng-template" id="script.js-3">
+  window.fmtBaseUrl = 'http://bo.casting.webtvpp02.flumotion.com';
+</script>
+</div>
 </div><h4 id="example_demo">Demo</h4>
-<div class="well doc-example-live animate-container" ng-embed-app="fmt" ng-set-html="index.html-0" ng-eval-javascript=""></div>
+<div class="well doc-example-live animate-container" ng-embed-app="fmt" ng-set-html="index.html-2" ng-eval-javascript="script.js-3"></div>
 </div></div>
 </div>
